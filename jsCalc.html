@@ -1,0 +1,48 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="jsCalcStyle.css"><link>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="jsCalcJS.js"></script>
+  </head>
+  <body>
+	<div id="calcContainer">
+		<form name="jsCalc" id="main">
+			<div class="row" id="row0">
+				<input type="text" name="display" id="screen" disabled="true">
+			</div>
+			<div class="row" id="row1">
+				<div class="buttonDiv" id="historyBack"><input type="button" class="button function" id="historyBack" value="<- History"></div>
+				<div class="buttonDiv" id="historyFront"><input type="button" class="button function" id="historyFront" value="History ->"></div>
+				<div class="buttonDiv" id="blank"><input type="button" class="button" id="blank" value=" "></div>
+				<div class="buttonDiv" id="clear"><input type="button" class="button function" id="clear" value="Del"></div>
+			</div>
+			<div class="row" id="row2">
+				<div class="buttonDiv" id="seven"><input type="button" class="button num" id="seven" value="7"></div>
+				<div class="buttonDiv" id="eight"><input type="button" class="button num" id="eight" value="8"></div>
+				<div class="buttonDiv" id="nine"><input type="button" class="button num" id="nine" value="9"></div>
+				<div class="buttonDiv" id="divide"><input type="button" class="button operator" id="divide" value=" / "></div>
+			</div>
+			<div class="row" id="row3">
+				<div class="buttonDiv" id="four"><input type="button" class="button num" id="four" value="4"></div>
+				<div class="buttonDiv" id="five"><input type="button" class="button num" id="five" value="5"></div>
+				<div class="buttonDiv" id="six"><input type="button" class="button num" id="six" value="6"></div>
+				<div class="buttonDiv" id="mult"><input type="button" class="button operator" id="mult" value=" * " ></div>
+			</div>
+			<div class="row" id="row4">
+				<div class="buttonDiv" id="one"><input type="button" class="button num" id="one" value="1"></div>
+				<div class="buttonDiv" id="two"><input type="button" class="button num" id="two" value="2"></div>
+				<div class="buttonDiv" id="three"><input type="button" class="button num" id="three" value="3"></div>
+				<div class="buttonDiv" id="subt"><input type="button" class="button operator" id="subt" value=" - "></div>
+			</div>
+			<div class="row" id="row5">
+				<div class="buttonDiv" id="dec"><input type="button" class="button num" id="dec" value="."></div>
+				<div class="buttonDiv" id="zero"><input type="button" class="button num" id="zero" value="0"></div>
+				<div class="buttonDiv" id="run"><input type="button" class="button function" id="run" value="="></div>
+				<div class="buttonDiv" id="add"><input type="button" class="button operator" id="add" value=" + "></div>
+			</div>
+		</form>
+	</div>
+	<div id="test">
+	</div>
+  </body>
+</html>
