@@ -13,9 +13,29 @@
 #screen{
   width: 90%;
   height: 100%;
+  border: 0px;
+  background-color: white;
+  color: black;
+  font-size: large;
+}
+#screen.error{
+  background-color: red;
 }
 .buttonDiv, .button {
   width: 22%;
   height: 100%;
   display: inline;
+  border-radius: 10px;
+}
+.num {
+  background-color: #2795EE;
+  color: white;
+}
+.operator{
+  background-color: #4CAF50;
+  color: white;
+}
+.function, #blank{
+  background-color: #20262E;
+  color: white;
 }

@@ -1,5 +1,5 @@
 var lastEntered;
-var historyLog = new Array;
+var historyLog = [];
 var histCounter = 0;
 
 $(document).ready(function(){
@@ -14,24 +14,25 @@ $(document).ready(function(){
 })
 
 function appendValue(value){
+	$("#screen").removeClass("error");
 	var currentVal = $("#screen").val();
   var newVal;
-	if(currentVal === null || lastEntered === null || isNaN(lastEntered)){
-		if(isNaN(value)){
-    	newVal = currentVal;
+    if(currentVal === null || lastEntered === null || isNaN(lastEntered)){
+      if(isNaN(value)){
+        newVal = currentVal;
+      }else{
+        newVal = currentVal += value;
+      }
     }else{
-    	newVal = currentVal += value;
+      newVal = currentVal += value;
     }
-  }else{
-  	newVal = currentVal += value;
-  }
   $("#screen").val(newVal);
   lastEntered = value;
-  //$("#test").append(lastEntered);
 }
 
 function clearValue(){
 	$("#screen").val("");
+  $("#screen").removeClass("error");
 }
 
 function runCalc(){
@@ -42,6 +43,7 @@ function runCalc(){
   	$("#screen").val(calcVal);
   }else{
   	$("#screen").val("ERROR");
+    $("#screen").addClass("error");
   }
   var histItem = valueString + " = " + calcVal;
   historyLog.push(histItem);
